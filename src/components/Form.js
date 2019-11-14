@@ -2,36 +2,36 @@ import React, { useState } from 'react';
 
 
 const Form = (props) => {
-    const [members, setMembers] = useState({
+    const [member, setMember] = useState({
     name: '', 
     email: '', 
     role: ''
 });
     const handleNewMembers = event => {
-        setMembers({...members, [event.target.name] : event.target.value});
+        setMember({...member, [event.target.name] : event.target.value});
     }
     const submitForm = event => {
         event.preventDefault()
-        props.addNewMember(members);
+        props.addNewMember(member);
         //resetting form
-        setMembers({name: '', email: '', role: ''})
+        setMember({name: '', email: '', role: ''})
     }
     return (
         <div>
           <form onSubmit={submitForm}>
               <label>
                   Your Name:
-                  <input name='name' onChange={handleNewMembers}/>
+                  <input id='name' name='name' type='text' onChange={handleNewMembers} value={member.name}/>
               </label>
               <br/>
               <label>
                   Your Email:
-                  <input email='email' onChange={handleNewMembers}/>
+                  <input id='email' name='email' type='text' onChange={handleNewMembers} value={member.email}/>
               </label>
               <br/>
               <label>
                   Your Role:
-                  <input role='role' onChange={handleNewMembers}/>
+                  <input id='role' name='role' type='text' onChange={handleNewMembers} value={member.role}/>
               </label>
               <br/>
               

@@ -4,7 +4,7 @@ import Members from './components/Members';
 import './App.css';
 
 function App() {
-  const [member, setMember] = useState([
+  const [members, setMembers] = useState([
     {
       id: 1,
       name: 'Johnny Hacker',
@@ -30,14 +30,14 @@ function App() {
       email: member.email,
       role: member.role
     };
-    setMember([...member, newMember])
+    setMembers([...members, newMember])
   }
 
   return (
     <div className="App">
         <h1>Dev Superstars</h1>
         <Form addNewMember={addNewMember}/>
-        <Members member={member} />
+        <Members members={members} />
     </div>
   );
 }

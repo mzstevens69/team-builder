@@ -2,9 +2,9 @@ import React from 'react';
 
 const Members = props => {
     return (
-        <div className='members-list'>
-      {props.member.map(member => (
-        <div className="note" key={member.id}>
+        <div className='members-card' >
+      {props.members.map(member => (
+        <div className="card" key={member.id} >
           <h2>{member.name}</h2>
           <p>{member.email}</p>
           <p>{member.role}</p>
