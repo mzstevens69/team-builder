@@ -22,6 +22,7 @@ function App() {
     }
   ]);
 
+
   const addNewMember = member => {
     const newMember = {
       id: Date.now(),

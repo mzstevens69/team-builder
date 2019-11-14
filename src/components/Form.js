@@ -17,35 +17,29 @@ const Form = (props) => {
         setMembers({name: '', email: '', role: ''})
     }
     return (
-        
+        <div>
           <form onSubmit={submitForm}>
-              <input onChange={handleNewMembers}
-              id='name'
-              value={members.name}
-              type='text'
-              name='name'
-              placeholder='Your Name'
-              />
-              <br />
-               <input onChange={handleNewMembers}
-              id='name'
-              value={members.name}
-              type='email'
-              name='name'
-              placeholder='Your email'
-              />
-              <br />
-                <input onChange={handleNewMembers}
-              id='name'
-              value={members.name}
-              type='text'
-              name='name'
-              placeholder='Your Role'
-              />
-              <br />
+              <label>
+                  Your Name:
+                  <input name='name' onChange={handleNewMembers}/>
+              </label>
+              <br/>
+              <label>
+                  Your Email:
+                  <input email='email' onChange={handleNewMembers}/>
+              </label>
+              <br/>
+              <label>
+                  Your Role:
+                  <input role='role' onChange={handleNewMembers}/>
+              </label>
+              <br/>
+              
+            
+      
               <button type='submit'>Make A Superstar</button>
           </form>
-        
+        </div>
 
     )
 }
